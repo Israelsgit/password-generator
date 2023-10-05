@@ -5,7 +5,7 @@ const passwordInput = document.querySelector('.password-box input'),
     generateButton = document.querySelector('.generate-button');
 
 // Characters oF  Alphabets (a-z/A-Z), Numbers(0-9) and symbols($%&...)
-let allCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-+|><,.?{}[]:;~";
+let allCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$";
 
 
 // This function will be called on, page reload, generateButton clicked and rangeInput slide
@@ -20,6 +20,7 @@ const generatePassword = () => {
     }
     passwordInput.value = newPassword  
     copyIcon.classList.replace("uil-file-check-alt", "uil-copy")    // replace copy icon
+    console.log(generatePassword);
 };
 
 rangeInput.addEventListener("input", () => {
